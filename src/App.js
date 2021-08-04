@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Layout, PageHeader } from 'antd'
+import { Router, Switch, Route } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+import Home from './pages/Home'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const history = createBrowserHistory()
+const { Content } = Layout
 
-export default App;
+const App = () => (
+  <Layout>
+    <PageHeader className='site-page-header' backIcon={false} title='Blog' />
+    <Content style={{ padding: 30 }}>
+      <Router history={history}>
+        <Switch>
+          <Route exact path={'/'} component={Home} />
+        </Switch>
+      </Router>
+    </Content>
+  </Layout>
+)
+
+export default App
