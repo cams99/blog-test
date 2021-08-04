@@ -12,7 +12,7 @@ const Home = () => {
   )
 
   useEffect(() => {
-    dispatch(getPosts())
+    if (!posts.length) dispatch(getPosts())
     // eslint-disable-next-line
   }, [])
 

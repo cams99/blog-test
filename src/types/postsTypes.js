@@ -1,3 +1,6 @@
 export const ERROR = 'ERROR'
+export const COMMENT_ERROR = 'COMMENT_ERROR'
 export const GET_POSTS = 'GET_POSTS'
 export const LOADING = 'LOADING'
+export const COMMENT_LOADING = 'COMMENT_LOADING'
+export const ADD_COMMENT = 'ADD_COMMENT'
