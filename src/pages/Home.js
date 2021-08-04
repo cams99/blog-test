@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getPosts } from '../actions/postsActions'
 import { Row, message } from 'antd'
-import Post from '../components/Post'
+import PostCard from '../components/PostCard'
 import UISpinner from '../components/UISpinner'
 
 const Home = () => {
@@ -25,7 +25,7 @@ const Home = () => {
   ) : (
     <Row gutter={30}>
       {posts.map((post, i) => (
-        <Post key={i} data={post} />
+        <PostCard key={i} data={post} />
       ))}
     </Row>
   )

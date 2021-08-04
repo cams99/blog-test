@@ -15,3 +15,9 @@ body {
 .site-page-header > div {
   justify-content: center;
 }
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
